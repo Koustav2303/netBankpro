@@ -40,7 +40,7 @@ export default function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300">
       
-      {/* MOBILE TOP HEADER (Visible only on mobile screens) */}
+      {/* 📱 MOBILE TOP HEADER (Visible only on mobile screens) */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg z-30 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between px-4">
         <div className="flex items-center gap-3">
           <button 
@@ -55,7 +55,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* MOBILE BACKDROP OVERLAY (Darkens screen when sidebar is open) */}
+      {/* 🌑 MOBILE BACKDROP OVERLAY (Darkens screen when sidebar is open) */}
       {isMobileMenuOpen && (
         <div 
           className="md:hidden fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-40 transition-opacity"
@@ -63,7 +63,7 @@ export default function Dashboard() {
         />
       )}
 
-      {/* SIDEBAR NAVIGATION */}
+      {/* 🖥️ SIDEBAR NAVIGATION */}
       <aside className={`
         fixed md:static inset-y-0 left-0 z-50 w-72 md:w-64 bg-white dark:bg-gray-800 shadow-2xl md:shadow-xl border-r border-gray-100 dark:border-gray-700 transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
@@ -121,8 +121,8 @@ export default function Dashboard() {
         </div>
       </aside>
 
-      {/* MAIN CONTENT AREA */}
-      <main className="flex-1 h-full overflow-y-auto pt-24 md:pt-0 relative z-0">
+      {/* 📄 MAIN CONTENT AREA */}
+      <main id="main-scroll-container" className="flex-1 h-full overflow-y-auto pt-24 md:pt-0 relative z-0">
         <div className="p-4 md:p-8 min-h-full flex flex-col">
           
           {/* Dashboard Routes */}
